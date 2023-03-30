@@ -23,7 +23,6 @@ const heightBox = document.querySelector(".height-box");
 const cookiesModule = document.querySelector(".cookies-module");
 const settingsModule = document.querySelector(".settings-module");
 
-
 const date = new Date();
 date.setSeconds(date.getSeconds() + 15);
 
