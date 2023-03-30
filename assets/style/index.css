@@ -21,8 +21,8 @@ body {
   --app-background: #181b2d;
   --app-white: #fff;
   --app-black: #000;
-  --app-blue: #364ee6;
-  --app-blue-hover: #566dff;
+  --app-blue: #1a75ff;
+  --app-blue-hover: #0066ff;
   --app-input: #aeaeae;
   --app-secondary: #546270;
   --app-form: #d9d9d9;
@@ -33,9 +33,69 @@ body {
 /*  Main
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
-p {
+.text {
   width: 80%;
   margin-top: 30%;
   color: var(--app-white);
   font-size: 25px;
+}
+
+.module {
+  position: absolute;
+  top: 25%;
+  left: 40%;
+  background-color: var(--app-white);
+  width: 300px;
+  height: 350px;
+  padding: 30px 20px;
+  border-radius: 5px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+.cookie-text {
+  font-size: 18px;
+  margin: 8px 0;
+}
+
+.buttons {
+  margin-top: 20px;
+}
+
+.accept {
+  width: 46%;
+  height: 40px;
+  border-radius: 50px;
+  font-size: 15px;
+  letter-spacing: 0.4px;
+  font-weight: 600;
+  background-color: var(--app-blue);
+  color: var(--app-white);
+}
+
+.accept:hover {
+  background-color: var(--app-blue-hover);
+}
+
+.settings {
+  margin-left: 15px;
+  width: 46%;
+  height: 40px;
+  border-radius: 50px;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  background-color: transparent;
+  color: var(--app-blue);
+  border-style: solid;
+  border-width: 1px;
+  border-color: var(--app-blue);
+}
+
+.settings:hover {
+  color: var(--app-blue-hover);
+  border-color: var(--app-blue-hover);
+  background-color: var(--app-form-backgorund);
 }
