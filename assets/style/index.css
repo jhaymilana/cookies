@@ -1,0 +1,35 @@
+@import url('./reset.css');
+
+body {
+  background-color: var(--app-background);
+}
+
+.container {
+  margin-inline: auto;
+  width: min(100% - 30px, 1080px);
+}
+
+.center {
+  display: grid;
+  place-items: center;
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* Variables
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+:root {
+  --app-background: #181b2d;
+  --app-white: #fff;
+  --app-black: #000;
+  --app-blue: #364ee6;
+  --app-blue-hover: #566dff;
+  --app-input: #aeaeae;
+  --app-secondary: #546270;
+  --app-form: #d9d9d9;
+  --app-form-backgorund: #f3f3f3;
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/*  Header
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
