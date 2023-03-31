@@ -26,8 +26,21 @@ const settingsModule = document.querySelector(".settings-module");
 const date = new Date();
 date.setSeconds(date.getSeconds() + 15);
 
+window.onload = function() {
+  cookiesModule.showModal();
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Event Listeners
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+settings.addEventListener('click', function() {
+  cookiesModule.close();
+  settingsModule.showModal();
+})
+
 accept.addEventListener('click', function() {
-  cookiesModule.classList.add('hidden');
+  cookiesModule.close();
 
   setCookie('Browser', `${getBrowserName}`, {'expires': date});
   setCookie('Operating System', `${getOSName}`, {'expires': date});
@@ -46,13 +59,8 @@ accept.addEventListener('click', function() {
 */
 })
 
-settings.addEventListener('click', function() {
-  settingsModule.classList.remove('hidden');
-  cookiesModule.classList.add('hidden');
-})
-
 save.addEventListener('click', function() {
-  settingsModule.classList.add('hidden');
+  settingsModule.close();
 
   if (browserBox.checked === true) {
     console.log(`Browser: ${getBrowserName()}`);
@@ -74,6 +82,10 @@ save.addEventListener('click', function() {
     // console.log(`Window Height: ${getCookie('Window Height')}`);
   }
 })
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Functions
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
 function getBrowserName() {          
   let userAgent = navigator.userAgent;
@@ -146,8 +158,4 @@ function getCookie(name) {
   ));
 
   return matches ? decodeURIComponent(matches[1]) : undefined;
-}
-
-function deleteCookie(name) {
-  setCookie(name, '', {'max-age': 15});
 }
